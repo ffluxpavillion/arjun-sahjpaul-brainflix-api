@@ -4,11 +4,11 @@ const express = require('express');
 const cors = require('cors');
 const port = process.env.PORT || 5000;
 
-// enables cors for all routes
-app.use(cors());
-
 // initializes express in application
 const app = express();
+
+// enables cors for all routes
+app.use(cors());
 
 // for parsing app/json
 app.use(express.json());
