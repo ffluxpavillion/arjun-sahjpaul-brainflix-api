@@ -13,6 +13,10 @@ const app = express();
 // for parsing app/json
 app.use(express.json());
 
+// serve static files from folder via express
+app.use('/images', express.static('public/images'));
+
+
 // const of videoRoutes
 const videoRoutes = require("./routes/videoRoutes");
 app.use('/videos', videoRoutes)
