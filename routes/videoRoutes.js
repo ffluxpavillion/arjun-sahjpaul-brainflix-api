@@ -9,7 +9,7 @@ const path = require('path');
 router.use(cors())
 router.use(express.json())
 
-const videosFilePath = path.join(__dirname, 'video-details.json');
+const videosFilePath = path.join(__dirname, '../data/video-details.json');
 
 // function to read the json file
 function readVideosFile() {
@@ -17,17 +17,18 @@ function readVideosFile() {
 }
 
 // GET /videos endpoint - responds with an array of videos
-router.get('/videos', (req, res) => {
+router.get('/', (req, res) => {
   try {
       const videos = readVideosFile();
       res.json(videos);
   } catch (error) {
-      res.status(500).send('Error reading video data');
+    console.error('Error occurred in GET /videos:', error);
+    res.status(500).send('Error reading video data'); 
   }
 });
 
 // GET /videos/:id endpoint - responds with object containing video details by id
-router.get('/videos/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   try {
       const videos = readVideosFile();
       const video = videos.find(v => v.id === req.params.id);
@@ -37,12 +38,13 @@ router.get('/videos/:id', (req, res) => {
           res.status(404).send('Video not found');
       }
   } catch (error) {
-      res.status(500).send('Error reading video data');
+    console.error('Error occurred in GET /videos/:id:', error);
+    res.status(500).send('Error reading video data');
   }
 });
 
 // POST /videos endpoint - Adds a new video to list with unique id
-router.post('/videos', (req, res) => {
+router.post('/', (req, res) => {
   try {
       const { title, channel, description, duration } = req.body;
       const videos = readVideosFile();
@@ -63,7 +65,8 @@ router.post('/videos', (req, res) => {
       fs.writeFileSync(videosFilePath, JSON.stringify(videos, null, 2));
       res.status(201).send(newVideo);
   } catch (error) {
-      res.status(500).send('Error saving video data');
+    console.error('Error occurred in POST /videos:', error);
+    res.status(500).send('Error saving video data');
   }
 });
 
