@@ -2,8 +2,8 @@ const express = require("express");
 const fs = require('fs');
 const router = express.Router();
 const { v4: uuidv4 } = require('uuid');
-const cors = require('cors')
-import path from 'path';
+const cors = require('cors');
+const path = require('path');
 
 // middleware to handle json data + cors
 router.use(cors())
