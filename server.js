@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 // initializes express in application
 const app = express();
@@ -16,7 +17,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 // serve static files from folder via express
-app.use('/images', express.static('public/images'));
+app.use(express.static(path.join(__dirname, 'public', 'images')));
 
 // const of videoRoutes
 const videoRoutes = require("./routes/videoRoutes");
