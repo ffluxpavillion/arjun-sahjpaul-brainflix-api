@@ -23,6 +23,10 @@ app.use(express.static(path.join(__dirname, 'public', 'images')));
 const videoRoutes = require("./routes/videoRoutes");
 app.use('/videos', videoRoutes)
 
+app.get("/", (req, res) => {
+  res.send("<span>Brainflix API - Server Homepage</span>");
+});
+
 // set port
 const port = process.env.PORT || 5500;
 
