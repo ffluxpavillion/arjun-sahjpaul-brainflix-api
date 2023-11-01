@@ -301,33 +301,33 @@
     ]
   },
   {
-    "id": "e868de16-5b9b-4dfe-8080-90f847ece45e",
-    "image": "req.body.image",
-    "views": "0",
-    "likes": "0",
-    "duration": "2:00",
-    "video": "https://project-2-api.herokuapp.com/stream",
-    "timestamp": 1698651810676,
-    "comments": []
-  },
-  {
-    "id": "07aa5e44-9916-4367-9c8b-9a59e14ea3d7",
-    "image": "req.body.image",
-    "views": "0",
-    "likes": "0",
-    "duration": "2:00",
-    "video": "https://project-2-api.herokuapp.com/stream",
-    "timestamp": 1698651829769,
-    "comments": []
-  },
-  {
-    "id": "f6b24e44-9765-41ee-9365-7c7c4ce6a6e1",
-    "image": "req.body.image",
-    "views": "0",
-    "likes": "0",
-    "duration": "2:00",
-    "video": "https://project-2-api.herokuapp.com/stream",
-    "timestamp": 1698653616564,
-    "comments": []
+    "id": "2ed0b76b-8a58-4f21-b8b6-c1118f317768",
+    "title": "EXECUTE ORDER 66 !!!",
+    "channel": "ChannelName",
+    "image": "http://localhost:8080/Upload-video-preview.jpg",
+    "timestamp": 1698833074791,
+    "comments": [
+      {
+        "id": "9e6bf87e-fcf1-4f17-9bde-d3266cf5723f",
+        "name": "CoolExplorer",
+        "comment": "Absolutely spot on with the emphasis on location! It’s incredible how pivotal it is for a travel experience. Your insights have inspired me; I’m now envisioning waking up to ocean waves on my next trip!",
+        "likes": 4,
+        "timestamp": 1631816492000
+      },
+      {
+        "id": "8f77347a-9b24-4d40-b698-ebdd63043338",
+        "name": "BraveTraveler",
+        "comment": "I’m so tempted to print this out for my next travel planning session, but then again, digital is the way to go! Your tips are golden; can't wait to try them out on my upcoming journey.",
+        "likes": 3,
+        "timestamp": 1631799181000
+      },
+      {
+        "id": "9c71c202-f157-42f6-928c-c925d1dcf353",
+        "name": "CuriousSeeker",
+        "comment": "Whether it’s luxury or budget-friendly, your approach to travel accommodation is spot on! Give me a serene view and a comfortable bed over extravagant amenities any day. Excited to try this approach!",
+        "likes": 2,
+        "timestamp": 1631716921000
+      }
+    ]
   }
 ]
